@@ -31,6 +31,7 @@
         },
         methods:{
             del(id){
+                // filter 保留所有不等于该id的项
                 this.list = this.list.filter(item => item.id != id)
             }
         }

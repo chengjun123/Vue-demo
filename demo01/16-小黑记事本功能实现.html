@@ -43,7 +43,9 @@
                 {id:3,name: '吃鸡五小时'},
             ]
         },methods: {
-
+            del(id){
+                this.list = this.list.filter(item => item.id != id)
+            }
         }
     })
 </script>
