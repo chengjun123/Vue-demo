@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app1">
+    {{ msg }}
+</div>
+<div id="app2"></div>
+<div id="app3"></div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app1',
+        data: {
+            msg: '我要学好vue'
+     }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <h3>小黑的书架</h3>
+        <li  v-for="(item,index) in list"  :key="item.id">
+            <span>{{item.name}}</span>
+            <span>{{item.author}}</span>
+            <button @click="del(item.id)">删除</button>
+        </li>
+
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            isDelete: true,
+            list: [
+                {id:1,name:'《红楼梦》',author:'曹雪芹'},
+                {id:2,name:'《西游记》',author:'吴承恩'},
+                {id:3,name:'《水浒传》',author:'施耐庵 '},
+                {id:4,name:'《三国演义》',author:'罗贯中'}
+            ]
+        },
+        methods:{
+            del(id){
+                this.list = this.list.filter(item => item.id != id)
+            }
+        }
+    })
+</script>
+</body>
+</html>

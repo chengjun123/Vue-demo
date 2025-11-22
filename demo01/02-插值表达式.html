@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{ msg }}</p>
+    <p>{{age >= 18 ? '成年' : '未成年'}}</p>
+    <p>{{frend.name}}</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            msg: '飞天盾体',
+            age: 18,
+            frend: {
+                name:  'james',
+                hobby: 'basketball'
+            }
+        }
+    })
+</script>
+</body>
+</html>

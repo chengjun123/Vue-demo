@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div v-if="gender === 1">男</div>
+    <div v-else>女</div>
+    <div v-if="scoer >= 90">小米打印机*44</div>
+    <div v-else-if="scoer >= 70">小米手环</div>
+    <div v-else-if="scoer  >= 60">充电宝</div>
+    <div v-else="scoer >=  50">惩罚</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data: {
+            gender: 2,
+            scoer: 100
+        }
+    })
+</script>
