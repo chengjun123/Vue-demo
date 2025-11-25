@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 20px;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h3> v-model修饰符 。trim 。numble</h3>
+    姓名：<input v-model="username" type="text"><br>
+    年纪：<input v-model="age" type="text"><br>
+
+    <h3>@事件名.stop  ->    阻止冒泡</h3>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+<script>
+    const app = new Vue({
+        el: '',
+        data: {
+
+        }
+    })
+</script>
+
+</body>
+</html>
