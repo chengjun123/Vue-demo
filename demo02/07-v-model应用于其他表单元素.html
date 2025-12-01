@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        textarea {
+            display: block;
+            width: 240px;
+            height: 100px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    姓名：
+    <input  type="text" v-model="username">
+    <br><br>
+    是否单身：
+    <input  v-model="isSingle" type="checkbox">
+    <br><br>
+    性别：
+    <input v-model="gender" type="radio" name="gender" value="1">男
+    <input v-model="gender" type="radio" name="gender" value="2">女
+    <br><br>
+    所在城市：
+    <select v-model="cityId">
+        <option value="101">常州</option>
+        <option value="102">苏州</option>
+        <option value="103">无锡</option>
+        <option value="104">南京</option>
+    </select>
+    <br><br>
+
+    自我描述：
+    <textarea v-model="desc"></textarea>
+
+    <button>立即注册</button>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data: {
+            username:'',
+            isSingle: true,
+            gender:"2",
+            cityId: "104",
+            desc:''
+        }
+    })
+</script>
+</body>
+</html>
