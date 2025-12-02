@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    姓：<input type="text" v-model="firstName">+
+    名：<input type="text" v-model="secondName">=
+    <span>{{fullName}}</span>
+    <button @click="changeName">改名卡</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data:{
+            firstName:'',
+            secondName:''
+        },
+        methods:{
+          changeName(){
+              this.fullName = "吕小布"
+          }
+        },
+        computed: {
+            fullName:{
+                get(){
+                    return this.firstName + this.secondName
+                },
+                set(value){
+                    this.firstName = value.slice(0,1)
+                    this.secondName = value.slice(1)
+                }
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
