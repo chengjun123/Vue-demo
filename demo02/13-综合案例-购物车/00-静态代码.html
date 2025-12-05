@@ -128,7 +128,16 @@
           computed:{
             countPrice(){
                 return this.fruitList.reduce((sum,item) => sum + item.num * item.price,0)
-            }
+            },
+              isAll: {
+                get(){
+                    // 必须所有的小选框都选中，全部按钮才选中 -> every
+                    return this.fruitList.every(item => item.isChecked)
+                },
+                  set(value){
+                    console.log(value)
+                  }
+              }
           }
       })
     </script>
